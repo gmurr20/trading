@@ -85,12 +85,12 @@ class AvgStrategy(bt.Strategy):
         if holding_asset:
             if curr_rsi > 70:
                 return 1
-            if curr_rsi < 50:
+            if curr_rsi <= 55:
                 return -1
             return 0
         if curr_rsi < 20:
             return 1
-        if curr_rsi < 50 and curr_rsi >= 20:
+        if curr_rsi <= 50 and curr_rsi >= 20:
             return -1
         if curr_rsi > 70:
             return 1
